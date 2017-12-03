@@ -15,15 +15,20 @@
     <bean class="com.epam.university.springripper.quoters.InjectRandomIntAnnotationBeanPostProcessor">
     </bean>
 
-    <bean class="com.epam.university.springripper.quoters.PostProxyInvokerContextListener">
-
-    </bean>
-
     <bean class="com.epam.university.springripper.quoters.ProfilingHandlerBeanPostProcessor">
     </bean>
 
     <bean id="terminatorQuoter" class="com.epam.university.springripper.quoters.TerminatorQuoter">
         <property name="message" value="I'll be back."/>
+    </bean>
+
+    <bean class="com.epam.university.springripper.quoters.PostProxyInvokerContextListener">
+
+    </bean>
+
+
+    <bean class="com.epam.university.springripper.quoters.DeprecationHandlerBeanFactoryPostProcessor">
+
     </bean>
 
 </beans>

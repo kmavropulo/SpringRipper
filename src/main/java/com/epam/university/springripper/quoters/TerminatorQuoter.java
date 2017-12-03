@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import javax.annotation.PostConstruct;
 
 @Profiling
+@DeprecatedClass(newImpl=T1000.class)
 @Setter
 public class TerminatorQuoter implements Quoter {
     private static final Logger logger = LoggerFactory.getLogger(TerminatorQuoter.class);
@@ -23,6 +24,7 @@ public class TerminatorQuoter implements Quoter {
     //constructor beforeInitialization/construct/init afterInitialization
     @PostConstruct
     public void init() {
+        //TODO test: swap @PostConstruct to annotation init
         logger.debug("3: TerminatorQuoter's init() started...");
         logger.debug("3: repeat=" + repeat);
     }

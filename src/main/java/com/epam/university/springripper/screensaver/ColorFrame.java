@@ -11,7 +11,7 @@ import java.util.Random;
 
 @Component
 //default spring's scope is @Scope("singleton")
-public class ColorFrame extends JFrame {
+public abstract class ColorFrame extends JFrame {
     @Autowired
     private Color color;
 
@@ -24,8 +24,9 @@ public class ColorFrame extends JFrame {
     public void showOnRandomPlace() {
         Random random = new Random();
         setLocation(random.nextInt(1720), random.nextInt(1880));
-        getContentPane().setBackground(color);
+        getContentPane().setBackground(getColor());
         repaint();
     }
 
+    protected abstract Color getColor();
 }

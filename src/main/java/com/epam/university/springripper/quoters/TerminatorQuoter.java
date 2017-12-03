@@ -16,21 +16,24 @@ public class TerminatorQuoter implements Quoter {
 
     //firstly fields are initialized, so the value is null
     public TerminatorQuoter() {
-        logger.debug("TerminatorQuoter's constructor started...");
-        logger.debug("repeat = " + repeat);
+        logger.debug("1: TerminatorQuoter's constructor started...");
+        logger.debug("1: repeat=" + repeat);
     }
 
+    //constructor beforeInitialization/construct/init afterInitialization
     @PostConstruct
     public void init() {
-        logger.debug("TerminatorQuoter's init() started...");
-        logger.debug("repeat" + repeat);
+        logger.debug("3: TerminatorQuoter's init() started...");
+        logger.debug("3: repeat=" + repeat);
     }
 
+    //@PostConstruct can be added to any method and in will be called after init just like init(..)
     @Override
+    @PostProxy
     public void sayQuote() {
-        logger.debug("TerminatorQuoter's sayQuote() started...");
+        logger.debug("6: TerminatorQuoter's sayQuote() started...");
         for (int i = 0; i < repeat; i++) {
-            logger.debug("message" + message);
+            logger.debug("6: message=" + message);
         }
     }
 }

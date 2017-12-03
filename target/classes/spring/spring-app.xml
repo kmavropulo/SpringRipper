@@ -4,6 +4,20 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:annotation-config/>
+
+
+    <!--Can be easily replaced by annotation-config-->
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor">
+    </bean>
+
+    <!-- id is autocreated by spring for spring -->
+    <bean class="com.epam.university.springripper.quoters.InjectRandomIntAnnotationBeanPostProcessor">
+    </bean>
+
+    <bean class="com.epam.university.springripper.quoters.ProfilingHandlerBeanPostProcessor">
+    </bean>
+
     <bean id="terminatorQuoter" class="com.epam.university.springripper.quoters.TerminatorQuoter">
         <property name="message" value="I'll be back."/>
     </bean>

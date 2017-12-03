@@ -8,5 +8,9 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
         ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext(
                 "spring/spring-app.xml");
+
+    classPathXmlApplicationContext.getBean(Quoter.class).sayQuote();
     }
+
+
 }

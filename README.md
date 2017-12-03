@@ -21,4 +21,4 @@ Report of Konstantin Mavropulo on lecture "Spring The Ripper" of Evgeny Borisov.
 - Konstantin Mavropulo.
 
 #### Acknowledgments:
-- [lecture of Evgeny Borisov ("Spring The Ripper"](https://www.youtube.com/watch?v=BmBr5diz8WA).
+- [lecture of Evgeny Borisov - "Spring The Ripper"](https://www.youtube.com/watch?v=BmBr5diz8WA).

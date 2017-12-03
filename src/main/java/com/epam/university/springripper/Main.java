@@ -6,11 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("spring/spring-app.xml");
-
-        while (true) {
-            Thread.sleep(100);
-            classPathXmlApplicationContext.getBean(Quoter.class).sayQuote();
-        }
+        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext(
+                "spring/spring-app.xml");
     }
 }

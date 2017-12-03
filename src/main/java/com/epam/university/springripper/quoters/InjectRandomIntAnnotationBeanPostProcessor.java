@@ -15,7 +15,7 @@ public class InjectRandomIntAnnotationBeanPostProcessor implements BeanPostProce
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        logger.debug("InjectRandomIntAnnotationBeanPostProcessor's postProcessBeforeInitialization(...) started...");
+        logger.debug("2: InjectRandomIntAnnotationBeanPostProcessor's postProcessBeforeInitialization(...) started...");
         Field[] fields = bean.getClass().getDeclaredFields();
         for (Field field : fields) {
             InjectRandomInt annotation = field.getAnnotation(InjectRandomInt.class);
@@ -33,7 +33,7 @@ public class InjectRandomIntAnnotationBeanPostProcessor implements BeanPostProce
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        logger.debug("InjectRandomIntAnnotationBeanPostProcessor's postProcessAfterInitialization(...) started...");
+        logger.debug("4: InjectRandomIntAnnotationBeanPostProcessor's postProcessAfterInitialization(...) started...");
         return bean;
     }
 }
